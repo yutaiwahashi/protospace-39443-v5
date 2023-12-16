@@ -16,6 +16,10 @@ class PrototypesController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+
+    def show
+      @prototype = Prototype.find(params[:id])
+    end
   end
 
   private
